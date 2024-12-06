@@ -120,17 +120,17 @@ const Register = async (req, res) => {
      async function main() {
       // send mail with defined transport object
       const info = await transporter.sendMail({
-        from: '"SpencerZill Academy" <academy@spencerzill.com>', // sender address
+        from: '" Academy" ', // sender address
         to: userDetails.email,
-        subject: "SpencerZill Academy Verify Registration", // Subject line
+        subject: " Academy Verify Registration", // Subject line
         // text: ``, // plain text body
         html: `
   <div style="font-family: Arial, sans-serif; background-color: #f6f9fc; padding: 40px; color: #4d4d4d;">
     <div style="max-width: 600px; margin: auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-      <h2 style="color: #3cc82f; text-align: center;">Welcome to Spencerzill Academy!</h2>
+      <h2 style="color: #3cc82f; text-align: center;">Welcome to  Academy!</h2>
       <hr style="border-top: 1px solid #e0e0e0;" />
       <p>Hello,</p>
-      <p>Thank you for joining Spencerzill Academy! To complete your registration, please verify your email by clicking the link below.</p>
+      <p>Thank you for joining  Academy! To complete your registration, please verify your email by clicking the link below.</p>
       <div style="text-align: center;">
         <a href="https://localhost:${port}/verify/${userRegisterToken}"
           style="background-color: #3cc82f; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-size: 16px; display: inline-block;">
@@ -138,9 +138,9 @@ const Register = async (req, res) => {
         </a>
       </div>
       <p>If you didn't register, or if you need help, <a href=${""} style="color: #3a5fcd;">contact our support team here</a>. No changes will be made to your account unless you confirm.</p>
-      <p>- The Spencerzill Academy Team</p>
+      <p>- The  Academy Team</p>
       <hr style="border-top: 1px solid #e0e0e0;" />
-      <p style="text-align: center; color: #999; font-size: 12px;">Spencerzill Academy</p>
+      <p style="text-align: center; color: #999; font-size: 12px;"> Academy</p>
     </div>
 </div>
 `, // html body
@@ -236,17 +236,17 @@ const ForgotPassword = async (req, res) => {
     async function main() {
       // send mail with defined transport object
       const info = await transporter.sendMail({
-        from: '"SpencerZill Academy" <academy@spencerzill.com>', // sender address
+        from: " Academy", // sender address
         to: email,
-        subject: "SpencerZill Academy Password Reset", // Subject line
+        subject: " Academy Password Reset", // Subject line
         // text: ``, // plain text body
         html: `
   <div style="font-family: Arial, sans-serif; background-color: #f6f9fc; padding: 40px; color: #4d4d4d;">
     <div style="max-width: 600px; margin: auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-      <h2 style="color: #3cc82f; text-align: center;">Spencerzill Academy</h2>
+      <h2 style="color: #3cc82f; text-align: center;"> Academy</h2>
       <hr style="border-top: 1px solid #e0e0e0;" />
       <p>Hello,</p>
-      <p>We received a request to reset the password for your Spencerzill Academy account associated with <strong>${email}</strong>.</p>
+      <p>We received a request to reset the password for your  Academy account associated with <strong>${email}</strong>.</p>
       <div style="text-align: center;">
         <a href=${"/"} 
           style="background-color: #3cc82f; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-size: 16px; display: inline-block;">
@@ -254,9 +254,9 @@ const ForgotPassword = async (req, res) => {
         </a>
       </div>
       <p>If you didn't make this request, or if you're having trouble signing in, <a href=${""} style="color: #3a5fcd;">contact us via our support site</a>. No changes have been made to your account.</p>
-      <p>- The Spencerzill Academy Team</p>
+      <p>- The Academy Team</p>
       <hr style="border-top: 1px solid #e0e0e0;" />
-      <p style="text-align: center; color: #999; font-size: 12px;">Spencerzill Academy, </p>
+      <p style="text-align: center; color: #999; font-size: 12px;"> Academy, </p>
     </div>
   </div>
 `, // html body

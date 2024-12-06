@@ -30,9 +30,9 @@ let scheduledMail = () => {
   async function main() {
     // send mail with defined transport object
     const info = await transporter.sendMail({
-      from: '"SpencerZill Academy" <academy@spencerzill.com>', // sender address
+      from: ' Academy ', // sender address
       to: email,
-      subject: "SpencerZill Academy Password Reset", // Subject line
+      subject: " Academy Password Reset", // Subject line
       text: `
             This is a reminder that you are booked on the following course:
 
@@ -145,7 +145,7 @@ const classScheduleReminderEmail=(name,link)=>{
 <div class="email-container">
     <!-- Header -->
     <div class="header">
-        <img src="https://via.placeholder.com/150" alt="Spencerzill Academy Logo">
+        <img src="https://via.placeholder.com/150" alt=" Academy Logo">
     </div>
 
     <!-- Content -->
@@ -190,7 +190,7 @@ const classScheduleReminderEmail=(name,link)=>{
 
     <!-- Footer -->
     <div class="footer">
-        <p>Spencerzill Academy | <a href="mailto:support@spencerzillacademy.com">Contact Us</a></p>
+        <p>">Contact Us</a></p>
         <p><a href="#">Unsubscribe</a></p>
     </div>
 </div>
