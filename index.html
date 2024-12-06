@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const requestOptions = {
+        method: "POST",
+        redirect: "follow",
+      };
+
+      fetch(
+        "http://localhost:3000/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHJpcGVQYXltZW50SUQiOiJjc190ZXN0X2ExcUNxYTlFVXFNWWk4OFNoYUUyQnhIbW5OeVoyNEt2RlJQR3YwVVBMbTQwcDI0WW9yUWpiZEo3cGwiLCJ1c2VySWQiOiI2NzIzNjA3YmRmMmZkZTA4M2RkMjQ3MzQiLCJpYXQiOjE3MzAzNzE3MDcsImV4cCI6MTczMDM3NTIwN30.5WsfXQXZM8F-eaBIR5zYMD3MJziBm1k8-_0t0r9He3Y",
+        requestOptions
+      )
+        .then((response) => response.text())
+        .then((result) => {
+          console.log(result);
+          window.location.replace('');
+        })
+        .catch((error) => console.error(error));
+    </script>
+  </body>
+</html>
