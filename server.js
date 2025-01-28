@@ -1,5 +1,5 @@
 const express = require("express");
-
+const {userAuth} = require('./middleware/middleware')
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -55,15 +55,15 @@ app.post("/forgot-password", ForgotPassword);
 
 app.post("/reset-password/:id", ResetPassword);
 
-app.get("/allusers", getAllUsers);
+app.get("/allusers",getAllUsers);
 
-app.get("/user/:id", getUser);
+app.get("/user/:id",userAuth, getUser);
 
 app.delete("/delete/user/:id", deleteUser);
 
-app.get("/courses",  courses);
+app.get("/courses", userAuth, courses);
 
-app.get("/course/:id", course);
+app.get("/course/:id",userAuth, course);
 
 app.post("/upload-course",upload.single("courseVideo"), uploadCourse);
 
